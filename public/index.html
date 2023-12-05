@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+body {
+    background-color: rgb(249, 243, 243);
+    text-align: center;
+
+}
+
+.container{
+    display: grid;
+    margin: 0;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows:0.2fr 1.5fr 1.2fr 0.4fr;
+    grid-template-areas:
+    "nav nav nav nav nav nav"
+    "sidebar sidebar sidebar sidebar sidebar sidebar"
+    "main main main main main main"
+    "content1 content1 content2 content2 content3 content3"
+    "footer footer footer footer footer footer";
+    grid-gap:0.5rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: 800;
+    color: #000000;
+    
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+header{
+    background-color: rgb(231, 179, 179);
+    grid-area: nav;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.nav-bg {
+    width: 100%;
+    border-radius: 5px;
+    color: rgb(85, 21, 21);
+    padding: 15px;
+    text-decoration-line: none;
+}
+.nav-bg:hover {
+    background-color: rgb(114, 87, 87);
+    color: white;
+} 
+
+#sidebar{
+    background: rgb(165, 226, 223);
+    grid-area: sidebar;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#pic1{
+
+    border-radius: 50%;
+    width: 150px;
+    margin-right: 15px;
+
+}
+
+#pic2{
+
+    width: 150px;
+    margin-left: 15px;
+
+}
+.desc {
+    width: 50%;
+}
+
+.aboutdesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+} 
+
+
+main{
+    background: rgb(187, 222, 187);
+    grid-area: main;
+
+    border-radius: 5px;
+/*     border: black 5px solid; */ 
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+#content1{
+    background: lightgray;
+    grid-area: content1;
+    border-radius: 5px;
+    padding: 30px;
+}
+#content2{
+    background: lightgray;
+    grid-area: content2;
+    border-radius: 5px;
+    padding: 30px;
+    
+}
+#content3{
+
+    background:  lightgray;
+    grid-area: content3;
+    border-radius: 5px;
+    padding: 30px;
+    
+}
+
+footer{
+    background: #f3d3b4;
+    grid-area: footer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.footerdiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.connectimage {
+    width: 35px; 
+    height: auto;
+}
+/* mobile layout */
+
+@media only screen and (max-width: 700px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows:0.2fr 1.5fr 1.2fr 1.2fr 1.2fr 1.2fr 0.4fr;
+
+        grid-template-areas:
+    "nav nav nav nav nav nav"
+    "sidebar sidebar sidebar sidebar sidebar sidebar"
+    "main main main main main main"
+    "content1 content1 content1 content1 content1 content1"
+    "content2 content2 content2 content2 content2 content2"
+    "content3 content3 content3 content3 content3 content3"
+    "footer footer footer footer footer footer";
+
+        row-gap: 0.5rem ;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1fr 1fr 1fr 1fr 1fr 0.4fr;
+
+        grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+
+        row-gap: 0.5rem ;
+    }
+    
+    #navbar {
+        flex-direction: column;
+    }
+
+    .nav-bg {
+        font-size: small;
+        padding: 10px;
+    }
+
+    .aboutdesc {
+        flex-direction: column;
+    }
+    
+    .desc {
+        width: 80%;
+    }
+
+    #pic1, #pic2{
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+    </style>
+    <title>Assignment 3</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav id="navbar">
+                <a class="nav-bg" href="#sidebar">About</a>
+                <a class="nav-bg" href="#two">Education</a>
+                <a class="nav-bg" href="#content1">Projects</a>
+                <a class="nav-bg" href="#content2">Experience</a>
+                <a class="nav-bg" href="#content3">Blogs</a>
+                <a class="nav-bg" href="#footer">Connect</a>
+            </nav>
+        </header>
+        
+
+
+        <div id="sidebar">
+            <h1>About</h1>
+            
+            <div class="aboutdesc">
+                <img id="pic1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXbySStyJdXw98ZnceimfB0ArDRauRzkuAqA&usqp=CAU" alt=""/>
+                <h3 class="desc">My name is Tashfin Ansari, and I'm pursuing a Master's degree in Computer Science at the University of New Haven. I also serve as a Graduate Assistant in the Graduate Admissions Office. Outside of academics, I'm an avid explorer, always eager to visit new places and expand my knowledge.</h3>
+            </div>
+        </div>
+
+
+        <main>
+            <div id="two">
+            <h1>Education</h1>
+            <p>
+                <div class="aboutdesc">
+                    <h3 class="desc">MS in Computer Science (University of New Haven)</h3>
+                    <img id="pic2" src="https://collegesofdistinction.com/wp-content/uploads/2018/07/university-new-haven-logo-300x259.png" alt="" />
+                </div>
+        
+                <div class="aboutdesc">
+                    <h3 class="desc">B.Tech in Computer Science (P.E.S College of Engineering)</h3>
+                    <img id="pic2" src="https://storage.googleapis.com/ezap-prod/colleges/8478/pes-college-of-engineering-aurangabad-logo.jpg" alt="" />
+                </div>
+
+            </p>
+            </div>
+        </main>
+
+        <div id="content1">
+
+            <h1>
+                
+                Projects 
+    
+            </h1>
+    
+                <p>Science Project to predict Loan Defaulters</p>
+                <p>Content Identification and Relocation of text from Images</p>
+                <p>Mini Project on Shopping Mall database</p>
+        </div>
+
+        <div id="content2">
+            <h1>
+
+                Experience
+    
+            </h1>
+    
+            <p>Currently working as a graduate assistant in University of New Haven.</p>   
+    
+            <p>Worked as a Junior Data Science intern at Sacroinfotech, California (Summer internship 2023).</p>
+    
+            <p>Worked as Data scientist in Aiolos Solution, Pvt. Ltd, Mumbai (1 year, 2021)</p>    
+        </div>
+
+        <div id="content3">
+            <h1>
+
+                Blogs
+    
+            </h1>
+    
+            <p>Books are windows to infinite worlds, offering adventures and knowledge on every page. They hold the power to transport us to distant lands and ignite our imagination. In the quiet embrace of a good book, we find solace and inspiration. Let's cherish these literary treasures and embark on endless journeys through the magic of words.</p>
+    
+        </div>
+        <footer id="footer">
+            <h1>Connect</h1>
+            <div class="footerdiv" style="margin: 10px;">
+                
+             <img class="connectimage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEUAAAD////7+/v39/fp6elBQUH8/Pza2trKysrt7e0dHR0SEhJXV1fj4+OVlZXg4OCysrI7OzumpqZHR0ebm5t1dXVkZGS8vLxSUlKNjY17e3tpaWksLCyDg4Px8fGhoaElJSUXFxfT09M0NDTGxsatra1dXV23t7c2NjZvb28+Pj7iDkBIAAAHv0lEQVR4nO2d57qqOhCGaUovUgUFEQtb7/8CD+Cy09OQk/ff3s9C5zMhmUkmE4Z9h5MtT1spzC+irDTPkrkPRczrP3jddkibCYxj63yDQk40VNLmQUE1RK5OoeAuSJsGjYUrfCsUfdJmQcUXPxVK82nAGwvpXWHwm6NnG0rwqlCan8BCovRUKM6ti95YiHeFwrwGmSe+cFPIuaQtQYbLVQpn2kdLyn7KsLxB2g6EGHyhUJ+Hq1aPqhcKbdJWIMVmGe73o4k2HI6RSduAGJmxSJuAGIvxSJuAGI/RSJuAGI1ZkTYBMStmjlHFK3PXR6FQKBQKhUKhUCgUCoVCoVAoFAqFQmlhxqkhqeNfvNjYGXF08Z2UtDmwcSIjN1+ys83ciK6kjYJHGp2yJfsJJ7lr0pbBQbEz+UtexdIMmrJ9lPh3Eipj87v5nghx3TP7nZ4hTbFQt9A+6iy26Sv76nH/+Uxq8Us2gGZCHa75D84Hpad2eRXy5fUR5VwlN8tI84AOAitBGefWUpe6Cn1zf2CrGX8DboZ02vSKbzhCyMOJhFZhT8xyVFGcTRg8+i7apNjqZzwCv4vR5xmsFolebOdZ8vwPCYaORhZwviRO6tXUIrwd1mKXaFNGw/vvCPQqRA1zYC8QJ24/XoYMoKNu+r6DdZjwxNTy7F3maK/q3xFAoA5prmrkZYDQL91/XosLIhC1t+q8DoH1TlUnG77R/k6Ex+x4QOS4RW9uVjLmpd9nAALvzsw6PCI67BO/O5LcaXgG53m8wL+DoGsjKBxaRNm/8aerLA1+L8Y3YektLqI8M8tufkQhj/nspSV6NOwTtqMFZudQEuT7S4wqQvxWyC53gyb/4OsDevP63cim/RqFRYcZ4kYBDKQv5CkqhZfakDWJezs4DhSFIrpZ0WkICYJN97MVYf+Yohmz77eNoclAeddv9AZx2B4Cka5DNUY9nNhracFsen6AQLSOW8vSAy91jzgpuEIT8bleo+3Ll8dDx+NbHVRgAG+prx6tw4Dj+mv975UVoEIcR887jcj9ll95AaYwGRfNDKPbJ+GCeN3k5jgg0T2LeCX4D7+PJaIV108eV6A2XJ5wKDz0W0Tis7xuWlaBxlJuh0Phvs9afIVs5pf083Gx+7lm+BCHQmYzwCSOF07vDghAaFEoxDHQMIzSuxHvJKfL+pAq1egD5JcmY9e+BnIZsl79YGkGu/iihSCxhXzGo3BvARgJhIxr4xtoyRoEAVv6ggsjyBujELVP+kCBEeWNQMclsJAIsnc0HtSbMiXbP4dTIaIQh1sa6ZtbCLgm0Yo4Sj45LJsZ/jVVme0RzrrgAJYoF6DuKOUomki57YYxwA7LODgsdcme80Qid6T7wFeIQyBDZhC9wWNR2C/NBw0iFoUxQYV4CiCmBBVi8ruxzxFP8AhkiIVOrIBJ4YWYQiwLbQX/RkX4MMC0hMGoIPk+QGCrtKoRakQdW/ir7sgoPLVu+UBlQ8Zzw1jjUd2RWKYRcB4wWWGPmwqsFKNCxicw2ODZsngQdlsEGR3TcveD1u18FOC/3QB3KxIoHQ+0xTIYE3cnLYkgJP/0BssG/hfrHNu8mAxMYoXFNgTO/+mJSOwEtGNgmRmXJO83WOBw4Tiyh9j3kY56aRhXdP+p7LBVVHW/VxT1jNhRJVS0+mpJJ3e3s61jJqLd9kZ73rAFXJEwuSsqzpimfEJvYQlQflNvsKWY1IBnOcMlOVXgaESERyt6sMeQOkT4uib0e20Z6Ss4UG+YkgoqnhwQzxgEZ4o7G6TBBb6V/BZClG73NG76gXIarZ6p3JkGVAKiDYypiB14aIYbfkKlsK4BgqVFTIn5fQmBzlHUwdkTu6xp7ULuqshP4Q1GdWKYGkXUJUxGka53sFzxZLoXwCqenfE86BTJTWgYrUW1wQTyJPZhhnAAFCjjyg0aiw94GkOYuEAFdLtmdHEmTPgSoHsj4EjIH4+ag7pv8jQCpgb24Jv7GWkNLaRrGzgW5iZ8P7HjQdjyljFnBfVnFe1gbK+JEx1jnPgEOnxWcNYUPbVVFGQmnMU200tJqyn0aM/aLAc/zMVnaTFg7K6yL1hQvcJb4bhlBSxpFdjT8poJUWzFJMMKviFmf4KtUc+nVkF/ncPUqOdTHEE3Fqy9is+yIJNB2dgwNJquP6UX8J09eEJbcFlMV1/FNgaIdBN3NXF5Nw52MtzdXvJyPukY8IONpA850p3o4o5YhtNYimFHEnt4b5yQSXk8yZXsHjjhKZfMxh7Lm1J+CjfXn3j1GlFX5yh07fxYBBs8zycFsigFp50Rhp7277fFvaCkh6ujnc9aydpZbZXZSKNQKBQKhUKhUCgUCoVCoVAoFAqFQqH875nY8TDoKAzpw+6oWTG/lBQxBo3BWBOUCB4z4dx4KFiMTNoExMgMuQJFWHA4ZjJn+tFgswyrzzkbRNULhTzhAjdIMfhCIStO90gxKAuRLRXiuJyVEOXdaeXFsMJEU62B8cuM++rq25n200VVx+J2ua80xwhDuVWw+ru+GH8laeQof6Xk7hc0S3PrqIt7DbLHFdTivIYb/1FL5nnJtuDOpxkX7vPc0ss14pxozMOBUw3xJeH87aJ0Xrd/P9JwbP3t3MDnVfCcbHna6jdHVmWleZb8eV7gP/RndFByWEGDAAAAAElFTkSuQmCC" alt="Twitter">
+             <img class="connectimage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEUAAAD////c3NzCwsIuLi6QkJBhYWF5eXm1tbVMTEwXFxfT09OioqL09PQ+Pj7Y2Njq6upgYGBbW1u+vr5tbW2urq5mZmYdHR2jo6NTU1MkJCR/f38pKSnz8/Nra2vj4+MQEBCGhoY2NjZ1dXXLy8uMjIxFRUUzMzOZmZk7OzsdJk+XAAAE5klEQVR4nO3d63aiSBSGYfGEgigqeEIbjEbJ/d/gmFndMzHWaVcXKTbre/9biycSKUCpXtD1er43oPEg5B+E/IOQfxDyD0L+Qcg/CPkHIf8gFJQsrvXIU7N1XDYrjHfnbDW93YeeertN95uwvjYkLHfn5fzQ8150Xxaz2LkwiXfF3bft/47ZbJ06FfbzrPKt+tatvibOhOk18+0RdRwYvI1mwiLyjZF00X+yGgkr3xB5h4ED4dW3Qt27Zk/VCpN1W/fQ31WFmqgTJpMP3wRdh1BJ1AhP+dQ3QN+h+Avheu97802KdtbCeON74w1TTFSVwqR18xhZU/m/olKYt/5T5r92Jyvh0fd2E5Kea6iEq8r3ZhMaL+jCk++NprUmC5PC9zbTukj2U7kwbfls7XvHCVGYDHxvMrWR+IghFaYX31tMbSU+kZIK+5wOFf92rGnClp8VijqThOXI9/bSGws/TWXCBZc595duOUV4HXrZyG22y9NEnvJ0dTiiCD0cK6rVLC7Tk3QK/dlEJdwKz4RbI6zCyUJ/9VMp7P1qszDMFyYXsNXCcWuF1W3UN+DxFW5Xwg/B7girzPhOGVOh5oouf2GtPDx0QLgjvIMshWfaFw/4CW+GRwm+Qtnlo64Iqz0RyE44pHwvhqMwWlKB3IRvxpM1rkLhyU6XhOJT8i4Jl+YTbqZC5d33TggtdlJewvus68K95F7Rc2nZ/1JZ3xgJJTdSnosLynXblglD/WlFeqYNyU64Vu6SgrgJyxV1SG7CX1vqkMyEV/qvApgJM/o3JZgJtxV5SGZCiyEhhNBxEFoMCSGEjuuYMHqpV+iEr6+JoqqtwuEm/N4l19w4zF5e8mivnKx6FG6IN9Gkrdt6nWYj+5o5tdZeiYIQQgghhBBCCCGEEEIIIYQQQgghZCJ0dSWqtcL9JH6p1PyS6/UVcbyo5y0VHvfj761mmt8hvL5kPN7clN9eaNlV/Uu3ruoL6th9C0EQWgwJIYSOg9BiSAghdByEFkNCCKHjILQYEkIIHQehxZAQQug4CC2GhBBCx0FoMSSEEDoOQoshIYTQcRBaDAkhhI6D0GJICCF0HIQWQ0IIoeMgtBgSQggdB6HFkBBC6DgILYaEEELHNSAUrkTQJWF1oQiv5AfAUnMvjEKSsPHVAd0LaasDLpbuTc+5F9JWeExr96bn3AvFv8WVCZtfDti9sBD+KlUmDPruTc85F1bixRakQvrzwok5F07FSxFIhcmkAdXXnAtH4iXqpMIgaUD1NdfCSLLykELY8JrHhea33NTxzpK/mFzY9Js4fd/NFOXE4SrZEm4KYVDQn/tOaPs2V0YcTrpLqITlRyO0RqoGskc0qIRB7WfpapvepU+0VQqTS6P7qcPm8sVMlcJg0PRh31WK5b/UwiB/873tJolPfc2EwZoBMVIuwqcTJtTj0s8nXjTeWPg4jWr5u3h4Vy+ZrBU+iNRll360j1o3+9MKH5+omW+GvI3u0e5GwiA+t3R2c7hcNU+bMhQGyWzZwulNdNP8CxKEjznqaKhZmOCni+4bo+WETYWfC9m1awqXGT7lzlz4iRz7Zv1pY7J4ooUwSJJ+Hk4bv+CvKpqHo8VJ+/liK3x0el438+crU93x4S+F7IKQfxDyD0L+Qcg/CPkHIf8g5B+E/IOQfxDyD0L+dV/4D8JjmpdfdY/aAAAAAElFTkSuQmCC" alt="Facebook">
+             <img class="connectimage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_j2WMKCSz3XrtzQ3yt4neu9nIE0nDtGKAQ&usqp=CAU" alt="Whatsapp">
+                
+            </div>
+        </footer>
+        
+    </div>
+</body>
+</html>

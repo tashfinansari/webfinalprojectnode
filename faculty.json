@@ -1,0 +1,71 @@
+{"faculty": [{
+    "fid":1,
+    "facultyName": "Brian Yu",
+    "yearOfJoining": 2020,
+    "subject": "Operating Systems",
+    "teachingExperience": "7 years"
+  },
+  {
+    "fid":2,
+    "facultyName": "John Carmack",
+    "yearOfJoining": 2015,
+    "teachingExperience": "4 years",
+    "subject": "Artificial Intelligence"
+  },
+  {
+    "fid":3,
+    "facultyName": "Andrej Karpathy",
+    "yearOfJoining": 2019,
+    "teachingExperience": "2 years",
+    "subject": "Blockchain Development"
+  },
+  {
+    "fid":4,
+    "facultyName": "Brian Lara",
+    "yearOfJoining": 2014,
+    "teachingExperience": "13 years",
+    "subject": "Medicine"
+  },
+  {
+    "fid":5,
+    "facultyName": "Frank Sinatra",
+    "yearOfJoining": 2006,
+    "teachingExperience": "8 years",
+    "subject": "Music"
+  },
+  {
+    "fid":6,
+    "facultyName": "Tom Hilton",
+    "yearOfJoining": 2017,
+    "teachingExperience": "9 years",
+    "subject": "Web Database"
+  },
+  {
+    "fid":7,
+    "facultyName": "Tom Felton",
+    "yearOfJoining": 2011,
+    "teachingExperience": "3 years",
+    "subject": "Economics"
+  },
+  {
+    "fid":8,
+    "facultyName": "Xiang Lin",
+    "yearOfJoining": 2019,
+    "teachingExperience": "16 years",
+    "subject": "Chemistry"
+  },
+  {
+    "fid":9,
+    "facultyName": "Mohidudin Bhuiyan",
+    "yearOfJoining": 2022,
+    "teachingExperience": "14 years",
+    "subject": "Physics"
+  },
+  {
+    "fid":10,
+    "facultyName": "HC Verma",
+    "yearOfJoining": 2013,
+    "teachingteachingExperience": "20 years",
+    "subject": "Thermodynamics"
+  }
+  ]}
