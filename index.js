@@ -1,8 +1,8 @@
 var http = require("http");
 const fs = require("fs");
 const path = require("path");
-const faculty = require("./faculty");
-const students = require("./students");
+const faculty = require("./public/faculty");
+const students = require("./public/students");
 
 const dirPath = path.join(__dirname, "/public");
 
